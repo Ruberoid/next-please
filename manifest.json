@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Next, please",
+  "version": "1.48.8",
+  "description": "Automatically plays the next YouTube Short when current one ends. Perfect for hands-free viewing. If not working immediately, press Ctrl+R on the Shorts page to reload.",
+  "author": "ruberoid",
+  "homepage_url": "https://github.com/Ruberoid/next-please",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Next, please",
+    "default_icon": {
+      "16": "next-please-logo.png",
+      "32": "next-please-logo.png",
+      "48": "next-please-logo.png",
+      "128": "next-please-logo.png"
+    }
+  },
+  "icons": {
+    "16": "next-please-logo.png",
+    "32": "next-please-logo.png",
+    "48": "next-please-logo.png",
+    "128": "next-please-logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/shorts/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
+
